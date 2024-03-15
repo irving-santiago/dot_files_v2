@@ -1,0 +1,26 @@
+[user]
+	name = Irving Santiago
+	email = elyasib.santiago@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = /usr/local/bin/nvim
+	excludesfile = ~/.gitignore_global
+	hooksPath = ~/.git-templates/hooks
+  #pager = diff-highlight | less -r
+[diff]
+  compactionHeuristic = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	st = status
+	co = checkout
+	l = log --date=short --graph
+	ci = commit -m
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+  ours   = "!f() { git checkout --ours $@ && git add $@; }; f"
+  theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
