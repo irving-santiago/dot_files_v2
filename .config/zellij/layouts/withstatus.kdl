@@ -4,7 +4,7 @@ layout {
     }
 
     pane size=1 borderless=true {
-        plugin location="file:/home/elyasib/.config/zellij/plugins/zjstatus.wasm" {
+        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
             format_left  "{mode}#[fg=black,bg=#689d6a,italic]{session}  #[fg=#689d6a,bg=#181825]{tabs}"
             format_right "#[fg=#181825,bg=#689d6a]{datetime}"
             format_space "#[bg=#181825]"

@@ -1,6 +1,9 @@
 # Start in vi mode
 set -o vi
 
+# Make brew available
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Save command history
 HISTFILE=~/.zsh_history
 HISTSIZE=30000
